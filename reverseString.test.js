@@ -9,9 +9,9 @@ describe('reverseString function', () => {
 
     test('Should handle empty string', () => {
         expect(reverseString('')).toBe('');
-    })
+    });
 
     test('Should handle a single character', () => {
         expect(reverseString('a')).toBe('a');
-    })
+    });
 });
