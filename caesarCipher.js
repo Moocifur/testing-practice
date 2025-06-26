@@ -11,6 +11,12 @@ export function caesarCipher(str, shift) {
             // Convert back to character
             return String.fromCharCode(newPos + 97);
         }
+        // Check if character is an uppercase letter
+        else if (char >= 'A' && char <= 'Z') {
+            const pos = char.charCodeAt(0) - 65 // 'A' = 65
+            const newPos = (pos + shift) % 26;
+            return String.fromCharCode(newPos + 65);
+        }
         // For now, just return non-lowercase characters unchanged
         return char;
     }).join('');
